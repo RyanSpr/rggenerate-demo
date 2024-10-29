@@ -1,0 +1,1103 @@
+{
+    "global": {
+        "defaultNumberOfRows": 1000,
+        "seed": 42
+    },
+    "tables": [
+        {
+            "name": "Address",
+            "numberOfRows": 1350,
+            "columns": [
+                {
+                    "name": "AddressID",
+                    "type": "RandomIntegers",
+                    "unique": true,
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "AddressLine1",
+                    "type": "StreetAddresses",
+                    "maxLength": 60
+                },
+                {
+                    "name": "AddressLine2",
+                    "type": "StreetAddresses",
+                    "maxLength": 60
+                },
+                {
+                    "name": "City",
+                    "type": "Cities",
+                    "maxLength": 30
+                },
+                {
+                    "name": "StateProvince",
+                    "type": "States",
+                    "maxLength": 50
+                },
+                {
+                    "name": "CountryRegion",
+                    "type": "Countries",
+                    "maxLength": 50
+                },
+                {
+                    "name": "PostalCode",
+                    "type": "PostCodes",
+                    "locale": "US",
+                    "maxLength": 15
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "2006-01-01T12:00:00",
+                    "maximum": "2024-12-31T23:59:59"
+                },
+                {
+                    "name": "rowguid",
+                    "type": "Uuids"
+                }
+            ],
+            "primaryKeys": [
+                "AddressID"
+            ],
+            "constraints": [
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "rowguid"
+                    ]
+                }
+            ],
+            "schema": "SalesLT"
+        },
+        {
+            "name": "Customer",
+            "numberOfRows": 2500,
+            "columns": [
+                {
+                    "name": "CustomerID",
+                    "type": "RandomIntegers",
+                    "unique": true,
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "NameStyle",
+                    "type": "RandomBits"
+                },
+                {
+                    "name": "Title",
+                    "type": "Titles",
+                    "maxLength": 8
+                },
+                {
+                    "name": "FirstName",
+                    "type": "GivenNames",
+                    "maxLength": 50
+                },
+                {
+                    "name": "MiddleName",
+                    "type": "GivenNames",
+                    "maxLength": 50
+                },
+                {
+                    "name": "LastName",
+                    "type": "FamilyNames",
+                    "maxLength": 50
+                },
+                {
+                    "name": "Suffix",
+                    "type": "Suffixes",
+                    "maxLength": 10
+                },
+                {
+                    "name": "CompanyName",
+                    "type": "CompanyNames",
+                    "maxLength": 128
+                },
+                {
+                    "name": "SalesPerson",
+                    "type": "SalesPersons",
+                    "maxLength": 256
+                },
+                {
+                    "name": "EmailAddress",
+                    "type": "EmailAddresses",
+                    "maxLength": 50
+                },
+                {
+                    "name": "Phone",
+                    "type": "PhoneNumbers",
+                    "maxLength": 25
+                },
+                {
+                    "name": "PasswordHash",
+                    "type": "PasswordHashes",
+                    "maxLength": 128
+                },
+                {
+                    "name": "PasswordSalt",
+                    "type": "PasswordHashes",
+                    "maxLength": 10
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "2006-01-01T12:00:00",
+                    "maximum": "2024-12-31T23:59:59"
+                },
+                {
+                    "name": "rowguid",
+                    "type": "Uuids"
+                }
+            ],
+            "primaryKeys": [
+                "CustomerID"
+            ],
+            "constraints": [
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "rowguid"
+                    ]
+                }
+            ],
+            "schema": "SalesLT"
+        },
+        {
+            "name": "CustomerAddress",
+            "columns": [
+                {
+                    "name": "CustomerID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "AddressID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "AddressType",
+                    "type": "AddressTypes",
+                    "maxLength": 50
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "2006-01-01T12:00:00",
+                    "maximum": "2024-12-31T23:59:59"
+                },
+                {
+                    "name": "rowguid",
+                    "type": "Uuids"
+                }
+            ],
+            "primaryKeys": [
+                "CustomerID",
+                "AddressID"
+            ],
+            "constraints": [
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "rowguid"
+                    ]
+                }
+            ],
+            "schema": "SalesLT"
+        },
+        {
+            "name": "Product",
+            "columns": [
+                {
+                    "name": "StandardCost",
+                    "type": "Prices",
+                    "minimum": 0,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ListPrice",
+                    "type": "Prices",
+                    "minimum": 0,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "Weight",
+                    "type": "RandomFloats",
+                    "minimum": 0,
+                    "maximum": 999999.99,
+                    "precision": 8,
+                    "scale": 2
+                },
+                {
+                    "name": "SellStartDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "2000-12-31T23:59:59"
+                },
+                {
+                    "name": "SellEndDate",
+                    "type": "RandomDates",
+                    "minimum": "5000-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "ProductID",
+                    "type": "RandomIntegers",
+                    "unique": true,
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "Name",
+                    "type": "RandomStrings",
+                    "maxLength": 50
+                },
+                {
+                    "name": "ProductNumber",
+                    "type": "ProductNumbers",
+                    "maxLength": 25
+                },
+                {
+                    "name": "Color",
+                    "type": "Colors",
+                    "maxLength": 15
+                },
+                {
+                    "name": "Size",
+                    "type": "Sizes",
+                    "maxLength": 5
+                },
+                {
+                    "name": "ProductCategoryID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ProductModelID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "DiscontinuedDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "ThumbnailPhotoFileName",
+                    "type": "ThumbnailPhotoFileNames",
+                    "maxLength": 50
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "rowguid",
+                    "type": "Uuids"
+                }
+            ],
+            "primaryKeys": [
+                "ProductID"
+            ],
+            "constraints": [
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "Name"
+                    ]
+                },
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "rowguid"
+                    ]
+                },
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "ProductNumber"
+                    ]
+                }
+            ],
+            "schema": "SalesLT"
+        },
+        {
+            "name": "ProductCategory",
+            "columns": [
+                {
+                    "name": "ProductCategoryID",
+                    "type": "RandomIntegers",
+                    "unique": true,
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ParentProductCategoryID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "Name",
+                    "type": "RandomStrings",
+                    "maxLength": 50
+                },
+                {
+                    "name": "rowguid",
+                    "type": "Uuids"
+                }
+            ],
+            "primaryKeys": [
+                "ProductCategoryID"
+            ],
+            "constraints": [
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "Name"
+                    ]
+                },
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "rowguid"
+                    ]
+                }
+            ],
+            "schema": "SalesLT"
+        },
+        {
+            "name": "ProductDescription",
+            "numberOfRows": 2256,
+            "columns": [
+                {
+                    "name": "ProductDescriptionID",
+                    "type": "RandomIntegers",
+                    "unique": true,
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "Description",
+                    "type": "Sentences",
+                    "maxLength": 400
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "rowguid",
+                    "type": "Uuids"
+                }
+            ],
+            "primaryKeys": [
+                "ProductDescriptionID"
+            ],
+            "constraints": [
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "rowguid"
+                    ]
+                }
+            ],
+            "schema": "SalesLT"
+        },
+        {
+            "name": "ProductModel",
+            "columns": [
+                {
+                    "name": "ProductModelID",
+                    "type": "RandomIntegers",
+                    "unique": true,
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "Name",
+                    "type": "RandomStrings",
+                    "maxLength": 50
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "CatalogDescription",
+                    "type": "Null"
+                },
+                {
+                    "name": "rowguid",
+                    "type": "Uuids"
+                }
+            ],
+            "primaryKeys": [
+                "ProductModelID"
+            ],
+            "constraints": [
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "Name"
+                    ]
+                },
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "rowguid"
+                    ]
+                }
+            ],
+            "schema": "SalesLT"
+        },
+        {
+            "name": "ProductModelProductDescription",
+            "numberOfRows": 2300,
+            "columns": [
+                {
+                    "name": "ProductModelID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ProductDescriptionID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "Culture",
+                    "type": "Cultures",
+                    "maxLength": 6
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "rowguid",
+                    "type": "Uuids"
+                }
+            ],
+            "primaryKeys": [
+                "ProductModelID",
+                "ProductDescriptionID",
+                "Culture"
+            ],
+            "constraints": [
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "ProductModelID",
+                        "Culture"
+                    ]
+                },
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "rowguid"
+                    ]
+                }
+            ],
+            "schema": "SalesLT"
+        },
+        {
+            "name": "SalesOrderDetail",
+            "numberOfRows": 1700,
+            "columns": [
+                {
+                    "name": "OrderQty",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 100
+                },
+                {
+                    "name": "UnitPrice",
+                    "type": "Prices",
+                    "minimum": 0,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "LineTotal",
+                    "type": "RandomFloats",
+                    "exclude": true,
+                    "minimum": 1,
+                    "maximum": 2147483647,
+                    "precision": 38,
+                    "scale": 6
+                },
+                {
+                    "name": "SalesOrderID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "SalesOrderDetailID",
+                    "type": "RandomIntegers",
+                    "unique": true,
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ProductID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "UnitPriceDiscount",
+                    "type": "UnitPriceDiscounts",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "rowguid",
+                    "type": "Uuids"
+                }
+            ],
+            "primaryKeys": [
+                "SalesOrderID",
+                "SalesOrderDetailID"
+            ],
+            "constraints": [
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "rowguid"
+                    ]
+                }
+            ],
+            "schema": "SalesLT"
+        },
+        {
+            "name": "SalesOrderHeader",
+            "columns": [
+                {
+                    "name": "OrderDate",
+                    "type": "RandomDates",
+                    "minimum": "2000-01-01T12:00:00",
+                    "maximum": "2008-12-31T23:59:59"
+                },
+                {
+                    "name": "DueDate",
+                    "type": "RandomDates",
+                    "minimum": "2009-01-01T12:00:00",
+                    "maximum": "2024-12-31T23:59:59"
+                },
+                {
+                    "name": "ShipDate",
+                    "type": "RandomDates",
+                    "minimum": "2009-01-01T12:00:00",
+                    "maximum": "2024-12-31T23:59:59"
+                },
+                {
+                    "name": "Status",
+                    "type": "RandomIntegers",
+                    "minimum": 0,
+                    "maximum": 8
+                },
+                {
+                    "name": "CustomerID",
+                    "type": "CustomerIDs",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "SubTotal",
+                    "type": "Prices",
+                    "minimum": 0,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "TaxAmt",
+                    "type": "Prices",
+                    "minimum": 0,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "Freight",
+                    "type": "ForestDiffusion",
+                    "minimum": 0,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "SalesOrderNumber",
+                    "type": "RandomStrings",
+                    "exclude": true,
+                    "maxLength": 25
+                },
+                {
+                    "name": "TotalDue",
+                    "type": "Prices",
+                    "exclude": true,
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "SalesOrderID",
+                    "type": "RandomIntegers",
+                    "unique": true,
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "RevisionNumber",
+                    "type": "RandomIntegers",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                {
+                    "name": "OnlineOrderFlag",
+                    "type": "RandomBits"
+                },
+                {
+                    "name": "PurchaseOrderNumber",
+                    "type": "PurchaseOrderNumbers",
+                    "maxLength": 25
+                },
+                {
+                    "name": "AccountNumber",
+                    "type": "AccountNumbers",
+                    "maxLength": 15
+                },
+                {
+                    "name": "ShipToAddressID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "BillToAddressID",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ShipMethod",
+                    "type": "ForestDiffusion",
+                    "maxLength": 50
+                },
+                {
+                    "name": "CreditCardApprovalCode",
+                    "type": "CreditCardApprovalCodes",
+                    "maxLength": 15
+                },
+                {
+                    "name": "Comment",
+                    "type": "Sentences",
+                    "maxLength": 1073741821
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "rowguid",
+                    "type": "Uuids"
+                }
+            ],
+            "primaryKeys": [
+                "SalesOrderID"
+            ],
+            "constraints": [
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "rowguid"
+                    ]
+                },
+                {
+                    "type": "Unique",
+                    "columns": [
+                        "SalesOrderNumber"
+                    ]
+                }
+            ],
+            "schema": "SalesLT"
+        },
+        {
+            "name": "BuildVersion",
+            "columns": [
+                {
+                    "name": "SystemInformationID",
+                    "type": "RandomIntegers",
+                    "unique": true,
+                    "minimum": 0,
+                    "maximum": 255
+                },
+                {
+                    "name": "VersionDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "ModifiedDate",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "Database Version",
+                    "type": "RandomStrings",
+                    "maxLength": 25
+                }
+            ],
+            "schema": "dbo",
+            "exclude": true
+        },
+        {
+            "name": "ErrorLog",
+            "columns": [
+                {
+                    "name": "ErrorLogID",
+                    "type": "RandomIntegers",
+                    "unique": true,
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ErrorTime",
+                    "type": "RandomDates",
+                    "minimum": "1753-01-01T12:00:00",
+                    "maximum": "9999-12-31T23:59:59"
+                },
+                {
+                    "name": "UserName",
+                    "type": "RandomStrings",
+                    "maxLength": 128
+                },
+                {
+                    "name": "ErrorNumber",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ErrorSeverity",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ErrorState",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ErrorProcedure",
+                    "type": "RandomStrings",
+                    "maxLength": 126
+                },
+                {
+                    "name": "ErrorLine",
+                    "type": "RandomIntegers",
+                    "minimum": 1,
+                    "maximum": 2147483647
+                },
+                {
+                    "name": "ErrorMessage",
+                    "type": "RandomStrings",
+                    "maxLength": 4000
+                }
+            ],
+            "primaryKeys": [
+                "ErrorLogID"
+            ],
+            "schema": "dbo",
+            "exclude": true
+        }
+    ],
+    "datasets": [
+        {
+            "name": "Suffixes",
+            "type": "List",
+            "values": [
+                "Sr.",
+                "Jr.",
+                "PhD",
+                "II",
+                "III",
+                "IV",
+                "NULL"
+            ]
+        },
+        {
+            "name": "AddressTypes",
+            "type": "List",
+            "values": [
+                "Shipping",
+                "Main Office"
+            ]
+        },
+        {
+            "name": "Sizes",
+            "type": "List",
+            "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "NULL"
+            ]
+        },
+        {
+            "name": "Cultures",
+            "type": "List",
+            "values": [
+                "ar",
+                "en",
+                "fr",
+                "he",
+                "th",
+                "zh-cht"
+            ]
+        },
+        {
+            "name": "UnitPriceDiscounts",
+            "type": "List",
+            "values": [
+                0.0,
+                0.02,
+                0.05,
+                0.1,
+                0.4
+            ]
+        },
+        {
+            "name": "SalesPersons",
+            "type": "Pattern",
+            "values": [
+                "adventure-works\\@@@@@#"
+            ]
+        },
+        {
+            "name": "ProductNumbers",
+            "type": "Pattern",
+            "values": [
+                "@@-####"
+            ]
+        },
+        {
+            "name": "ThumbnailPhotoFileNames",
+            "type": "Pattern",
+            "values": [
+                "@@@@@.gif"
+            ]
+        },
+        {
+            "name": "PurchaseOrderNumbers",
+            "type": "Pattern",
+            "values": [
+                "PO##########"
+            ]
+        },
+        {
+            "name": "AccountNumbers",
+            "type": "Pattern",
+            "values": [
+                "10-40#0-0#####"
+            ]
+        },
+        {
+            "name": "CustomerIDs",
+            "type": "Pattern",
+            "values": [
+                "#####"
+            ]
+        },
+        {
+            "name": "ShipMethods",
+            "type": "Pattern",
+            "values": [
+                "CARGO TRANSPORT #"
+            ]
+        },
+        {
+            "name": "CreditCardApprovalCodes",
+            "type": "Pattern",
+            "values": [
+                "#####Vi#####"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "Address",
+            "parentColumns": [
+                "AddressID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "CustomerAddress",
+            "childColumns": [
+                "AddressID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "Customer",
+            "parentColumns": [
+                "CustomerID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "CustomerAddress",
+            "childColumns": [
+                "CustomerID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "ProductModel",
+            "parentColumns": [
+                "ProductModelID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "Product",
+            "childColumns": [
+                "ProductModelID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "ProductCategory",
+            "parentColumns": [
+                "ProductCategoryID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "Product",
+            "childColumns": [
+                "ProductCategoryID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "ProductCategory",
+            "parentColumns": [
+                "ProductCategoryID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "ProductCategory",
+            "childColumns": [
+                "ParentProductCategoryID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "ProductModel",
+            "parentColumns": [
+                "ProductModelID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "ProductModelProductDescription",
+            "childColumns": [
+                "ProductModelID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "ProductDescription",
+            "parentColumns": [
+                "ProductDescriptionID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "ProductModelProductDescription",
+            "childColumns": [
+                "ProductDescriptionID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "SalesOrderHeader",
+            "parentColumns": [
+                "SalesOrderID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "SalesOrderDetail",
+            "childColumns": [
+                "SalesOrderID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "Product",
+            "parentColumns": [
+                "ProductID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "SalesOrderDetail",
+            "childColumns": [
+                "ProductID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "Address",
+            "parentColumns": [
+                "AddressID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "SalesOrderHeader",
+            "childColumns": [
+                "ShipToAddressID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "Address",
+            "parentColumns": [
+                "AddressID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "SalesOrderHeader",
+            "childColumns": [
+                "BillToAddressID"
+            ]
+        },
+        {
+            "parentSchema": "SalesLT",
+            "parentTable": "Customer",
+            "parentColumns": [
+                "CustomerID"
+            ],
+            "childSchema": "SalesLT",
+            "childTable": "SalesOrderHeader",
+            "childColumns": [
+                "CustomerID"
+            ]
+        }
+    ]
+}

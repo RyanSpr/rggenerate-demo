@@ -1,5 +1,5 @@
 rggenerate ^
-populate --source-connection-string "mssql+pyodbc://sa:P455w07d!@127.0.0.1/AdventureWorksLT2022?TrustServerCertificate=yes&driver=ODBC+Driver+17+for+SQL+Server" ^
-         --target-connection-string "mssql+pyodbc://sa:P455w07d!@127.0.0.1/AdventureWorksLT2022Copy?TrustServerCertificate=yes&driver=ODBC+Driver+17+for+SQL+Server" ^
+populate --source-connection-string "mssql://WIN2016/AdventureWorksLT2016?trusted_connection=yes" ^
+         --target-connection-string "mssql://WIN2016/AdventureWorksLT2016Copy?trusted_connection=yes" ^
          --generation-file C:\Users\James.Hemson\EndToEndSubsetClassify\datageneration.json
  
