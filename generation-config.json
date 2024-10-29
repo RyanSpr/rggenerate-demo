@@ -214,13 +214,13 @@
             "columns": [
                 {
                     "name": "StandardCost",
-                    "type": "ForestDiffusion",
+                    "type": "Prices",
                     "minimum": 0,
                     "maximum": 2147483647
                 },
                 {
                     "name": "ListPrice",
-                    "type": "ForestDiffusion",
+                    "type": "Prices",
                     "minimum": 0,
                     "maximum": 2147483647
                 },
@@ -268,7 +268,7 @@
                 },
                 {
                     "name": "Size",
-                    "type": "ForestDiffusion",
+                    "type": "Sizes",
                     "maxLength": 5
                 },
                 {
