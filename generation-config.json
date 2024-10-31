@@ -13,7 +13,7 @@
                     "type": "RandomIntegers",
                     "unique": true,
                     "minimum": 1,
-                    "maximum": 2000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "AddressLine1",
@@ -79,7 +79,7 @@
                     "type": "RandomIntegers",
                     "unique": true,
                     "minimum": 1,
-                    "maximum": 5000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "NameStyle",
@@ -171,13 +171,13 @@
                     "name": "CustomerID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 2000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "AddressID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 2000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "AddressType",
@@ -214,42 +214,42 @@
             "columns": [
                 {
                     "name": "StandardCost",
-                    "type": "Prices",
+                    "type": "ForestDiffusion",
                     "minimum": 0,
-                    "maximum": 1000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "ListPrice",
-                    "type": "Prices",
+                    "type": "ForestDiffusion",
                     "minimum": 0,
-                    "maximum": 1500
+                    "maximum": 2147483647
                 },
                 {
                     "name": "Weight",
                     "type": "RandomFloats",
                     "minimum": 0,
-                    "maximum": 45.00,
+                    "maximum": 999999.99,
                     "precision": 8,
                     "scale": 2
                 },
                 {
                     "name": "SellStartDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-01T12:00:00",
-                    "maximum": "2024-12-31T23:59:59"
+                    "minimum": "2000-01-01T12:00:00",
+                    "maximum": "2022-12-31T23:59:59"
                 },
                 {
                     "name": "SellEndDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-01T12:00:00",
-                    "maximum": "2024-12-31T23:59:59"
+                    "minimum": "2023-01-01T12:00:00",
+                    "maximum": "2026-12-31T23:59:59"
                 },
                 {
                     "name": "ProductID",
                     "type": "RandomIntegers",
                     "unique": true,
                     "minimum": 1,
-                    "maximum": 2000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "Name",
@@ -275,18 +275,18 @@
                     "name": "ProductCategoryID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 20
+                    "maximum": 2147483647
                 },
                 {
                     "name": "ProductModelID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 200
+                    "maximum": 2147483647
                 },
                 {
                     "name": "DiscontinuedDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-01T12:00:00",
+                    "minimum": "2000-01-01T12:00:00",
                     "maximum": "2024-12-31T23:59:59"
                 },
                 {
@@ -297,7 +297,7 @@
                 {
                     "name": "ModifiedDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-01T12:00:00",
+                    "minimum": "2000-01-01T12:00:00",
                     "maximum": "2024-12-31T23:59:59"
                 },
                 {
@@ -338,18 +338,18 @@
                     "type": "RandomIntegers",
                     "unique": true,
                     "minimum": 1,
-                    "maximum": 20
+                    "maximum": 2147483647
                 },
                 {
                     "name": "ParentProductCategoryID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 20
+                    "maximum": 2147483647
                 },
                 {
                     "name": "ModifiedDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-01T12:00:00",
+                    "minimum": "2000-01-01T12:00:00",
                     "maximum": "2024-12-31T23:59:59"
                 },
                 {
@@ -390,7 +390,7 @@
                     "type": "RandomIntegers",
                     "unique": true,
                     "minimum": 1,
-                    "maximum": 3000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "Description",
@@ -400,7 +400,7 @@
                 {
                     "name": "ModifiedDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-01T12:00:00",
+                    "minimum": "2000-01-01T12:00:00",
                     "maximum": "2024-12-31T23:59:59"
                 },
                 {
@@ -429,7 +429,7 @@
                     "type": "RandomIntegers",
                     "unique": true,
                     "minimum": 1,
-                    "maximum": 20000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "Name",
@@ -439,8 +439,8 @@
                 {
                     "name": "ModifiedDate",
                     "type": "RandomDates",
-                    "minimum": "1753-01-01T12:00:00",
-                    "maximum": "9999-12-31T23:59:59"
+                    "minimum": "2000-01-01T12:00:00",
+                    "maximum": "2024-12-31T23:59:59"
                 },
                 {
                     "name": "CatalogDescription",
@@ -478,13 +478,13 @@
                     "name": "ProductModelID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 20000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "ProductDescriptionID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 20000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "Culture",
@@ -494,7 +494,7 @@
                 {
                     "name": "ModifiedDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-01T12:00:00",
+                    "minimum": "2000-01-01T12:00:00",
                     "maximum": "2024-12-31T23:59:59"
                 },
                 {
@@ -530,22 +530,22 @@
             "columns": [
                 {
                     "name": "OrderQty",
-                    "type": "RandomIntegers",
+                    "type": "ForestDiffusion",
                     "minimum": 1,
-                    "maximum": 35
+                    "maximum": 100
                 },
                 {
                     "name": "UnitPrice",
-                    "type": "Prices",
+                    "type": "ForestDiffusion",
                     "minimum": 0,
-                    "maximum": 1500
+                    "maximum": 2147483647
                 },
                 {
                     "name": "LineTotal",
                     "type": "RandomFloats",
                     "exclude": true,
                     "minimum": 1,
-                    "maximum": 4500.00,
+                    "maximum": 2147483647,
                     "precision": 38,
                     "scale": 6
                 },
@@ -553,31 +553,31 @@
                     "name": "SalesOrderID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 20000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "SalesOrderDetailID",
                     "type": "RandomIntegers",
                     "unique": true,
                     "minimum": 1,
-                    "maximum": 20000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "ProductID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 20000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "UnitPriceDiscount",
                     "type": "UnitPriceDiscounts",
                     "minimum": 1,
-                    "maximum": 300
+                    "maximum": 1000
                 },
                 {
                     "name": "ModifiedDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-01T12:00:00",
+                    "minimum": "2000-01-01T12:00:00",
                     "maximum": "2024-12-31T23:59:59"
                 },
                 {
@@ -605,20 +605,20 @@
                 {
                     "name": "OrderDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-01T12:00:00",
-                    "maximum": "2024-10-28T23:59:59"
+                    "minimum": "2000-01-01T12:00:00",
+                    "maximum": "2024-11-30T23:59:59"
                 },
                 {
                     "name": "DueDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-04T12:00:00",
-                    "maximum": "2024-10-31T23:59:59"
+                    "minimum": "2024-12-01T12:00:00",
+                    "maximum": "2025-01-31T23:59:59"
                 },
                 {
                     "name": "ShipDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-02T12:00:00",
-                    "maximum": "2024-10-29T23:59:59"
+                    "minimum": "2024-12-01T12:00:00",
+                    "maximum": "2025-01-31T23:59:59"
                 },
                 {
                     "name": "Status",
@@ -630,19 +630,19 @@
                     "name": "CustomerID",
                     "type": "CustomerIDs",
                     "minimum": 1,
-                    "maximum": 20000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "SubTotal",
                     "type": "Prices",
                     "minimum": 0,
-                    "maximum": 1500
+                    "maximum": 2147483647
                 },
                 {
                     "name": "TaxAmt",
                     "type": "Prices",
                     "minimum": 0,
-                    "maximum": 450
+                    "maximum": 2147483647
                 },
                 {
                     "name": "Freight",
@@ -661,14 +661,14 @@
                     "type": "Prices",
                     "exclude": true,
                     "minimum": 1,
-                    "maximum": 2500
+                    "maximum": 2147483647
                 },
                 {
                     "name": "SalesOrderID",
                     "type": "RandomIntegers",
                     "unique": true,
                     "minimum": 1,
-                    "maximum": 20000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "RevisionNumber",
@@ -694,13 +694,13 @@
                     "name": "ShipToAddressID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 20000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "BillToAddressID",
                     "type": "RandomIntegers",
                     "minimum": 1,
-                    "maximum": 20000
+                    "maximum": 2147483647
                 },
                 {
                     "name": "ShipMethod",
@@ -720,8 +720,8 @@
                 {
                     "name": "ModifiedDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-04T12:00:00",
-                    "maximum": "2024-10-31T23:59:59"
+                    "minimum": "2000-01-01T12:00:00",
+                    "maximum": "2024-12-31T23:59:59"
                 },
                 {
                     "name": "rowguid",
@@ -760,14 +760,14 @@
                 {
                     "name": "VersionDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-04T12:00:00",
-                    "maximum": "2024-10-31T23:59:59"
+                    "minimum": "2000-01-01T12:00:00",
+                    "maximum": "2024-12-31T23:59:59"
                 },
                 {
                     "name": "ModifiedDate",
                     "type": "RandomDates",
-                    "minimum": "2006-01-04T12:00:00",
-                    "maximum": "2024-10-31T23:59:59"
+                    "minimum": "2000-01-01T12:00:00",
+                    "maximum": "2024-12-31T23:59:59"
                 },
                 {
                     "name": "Database Version",
@@ -791,8 +791,8 @@
                 {
                     "name": "ErrorTime",
                     "type": "RandomDates",
-                    "minimum": "2006-01-04T12:00:00",
-                    "maximum": "2024-10-31T23:59:59"
+                    "minimum": "2000-01-01T12:00:00",
+                    "maximum": "2024-12-31T23:59:59"
                 },
                 {
                     "name": "UserName",
@@ -849,12 +849,25 @@
                 "Sr.",
                 "Jr.",
                 "PhD",
+                "MD", 
+                "DDS",
+                "Esq.",
                 "II",
                 "III",
                 "IV",
-                "NULL"
+                "V",
+                "DVM",
+                "EdD",
+                "JD",
+                "PE",
+                "CPA", 
+                "MBA",
+                "MS",
+                "MA",
+                "BSc",
+                "BA"
             ]
-        },
+         },
         {
             "name": "AddressTypes",
             "type": "List",
@@ -915,7 +928,7 @@
             "name": "ThumbnailPhotoFileNames",
             "type": "Pattern",
             "values": [
-                "@@@@@.gif"
+                "*****.gif"
             ]
         },
         {
@@ -937,13 +950,6 @@
             "type": "Pattern",
             "values": [
                 "#####"
-            ]
-        },
-        {
-            "name": "ShipMethods",
-            "type": "Pattern",
-            "values": [
-                "CARGO TRANSPORT #"
             ]
         },
         {
