@@ -226,7 +226,7 @@
                 },
                 {
                     "name": "Weight",
-                    "type": "RandomFloats",
+                    "type": "ForestDiffusion",
                     "minimum": 0,
                     "maximum": 999999.99,
                     "precision": 8,
@@ -253,7 +253,7 @@
                 },
                 {
                     "name": "Name",
-                    "type": "RandomStrings",
+                    "type": "ForestDiffusion",
                     "maxLength": 50
                 },
                 {
